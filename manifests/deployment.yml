@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sufideenpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sufideenpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sufideenpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sufideenpipelinesjavascriptdocker 
+          image: ictlabacr.azurecr.io/sufideenpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
